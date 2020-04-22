@@ -11,28 +11,30 @@ def crearMatriz(N = 4):
         matriz.append([0]*N)
     return matriz
 
-def llenarMatriz1(matriz):
-    numAzar = randint(1, len(matriz)**2)
+def existe(matriz, num):
+    """Verifica si un numero esta en la matriz.
+    Retorna True si el numero se encuentra, False si no.
+    
+    Parametros de entrada: matriz y numero a buscar.
+    
+    """
+    encontrado = False
+    for fila in matriz:
+        if num in fila:
+            encontrado = True
+    return encontrado
+    
+
+def llenarMatriz(matriz):
     filas = len(matriz)
     columnas = len(matriz[0])
-    while numAzar not in matriz:
-        for f in range(filas):
-            for c in range(columna):
-                matriz[f][c] = numAzar
-        numAzar = randint(1,len(matriz)**2)
-
-def llenarMatriz2(matriz):
-    lista = []
-    numAzar = randint(1,len(matriz)**2)
-    cont = 0
-    while len(lista) < len(matriz)**2:
-        while numAzar not in lista:
-            lista.append(numAzar)
-            cont = cont + 1
-        numAzar = randint(1, len(matriz)**2)
-        
-    
-               
+    for f in range(filas):
+        for c in range(columnas):
+            numAzar = randint(1,len(matriz)**2)
+            while existe(matriz, numAzar):
+                numAzar = randint(1,len(matriz)**2)
+            matriz[f][c] = numAzar
+                     
         
 def imprimirMatriz(matriz):
     'Imprime la matriz con formato'
