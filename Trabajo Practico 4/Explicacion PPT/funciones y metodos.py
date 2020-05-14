@@ -1,0 +1,15 @@
+cad = "Miercoles, Jueves, Viernes, Jueves"
+print(f"Cadena: {cad}")
+print(cad[1:15])
+print(f"Logitud: {len(cad)}")
+print(f"Maximo: {max(cad)}")
+print(f"Minimo: {min(cad)}")
+print(f"Cant de A: {cad.count('a')}")
+print(f"Indice de r: {cad.index('r')}")
+print(f"Con separador: {'☺'.join(cad)}")
+lista = cad.split('e')
+print(f"Lista con split: {lista}")
+cad1 = cad.replace("Jueves","Sabado",1)
+print(f"Cadena con replace: {cad1}")
+cadInvertida = cad[::-1]
+print(f"Cadena original invertida: {cadInvertida}")
