@@ -1,7 +1,0 @@
-# Ejer
-#Nro
-#1
-"""hola"""
-nro = int(input())'como estas'
-#hola
-print(nro)#hola
