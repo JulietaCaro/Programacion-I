@@ -1,0 +1,2 @@
+nro = int(input())
+print(nro)
